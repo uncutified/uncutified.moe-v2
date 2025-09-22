@@ -28,6 +28,10 @@
 	--summary: #1c1c1c;
 }
 
+::selection {
+	background-color: var(--accent);
+}
+
 body {
 	background-color: var(--bg-color);
 	font-family: DBNeoSans;
