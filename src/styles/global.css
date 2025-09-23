@@ -58,6 +58,10 @@ nav a:hover {
 	gap: 2rem;
   }
 
+  .subsplash {
+	margin-top: 7px;
+  }
+
   .splash-content {
 	flex: 1;
   }
@@ -189,26 +193,23 @@ nav a:hover {
 	border: 1px solid var(--borders);
   }
   
-  /* feste Kachelgröße, damit alles gleich aussieht */
   .friendpic {
-	flex: 0 0 52px;     /* exakt ~48px breit */
+	flex: 0 0 52px;
 	width: 52px;
-	height: 52px;       /* macht’s quadratisch */
+	height: 52px;
 	border-radius: 8px;
-	overflow: hidden;   /* runde Ecken fürs Bild erzwingen */
+	overflow: hidden;
 	position: relative;
-	outline: 1px solid color-mix(in srgb, var(--borders), white 6%); /* dezente Kanten */
+	outline: 1px solid color-mix(in srgb, var(--borders), white 6%);
   }
   
-  /* das eigentliche Bild */
   .friendpic img {
 	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;  /* schneidet sauber zu, falls nicht exakt quadratisch */
+	object-fit: cover;
   }
   
-  /* optional: Hover wie im UI-Style */
   .friendpic:hover {
 	outline-color: var(--accent);
 	box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent), transparent 70%);
