@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Summary from '../components/Summary.astro';
-import Projectcard from '../components/Projectcard.astro';
+import Gamecard from '../components/Gamecard.astro';
 import Friendpic from '../components/Friendpic.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
@@ -34,9 +34,66 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 			  <hr class="section-seperation">
 			  
-			  <div class="about-me">
-				<p class="wip">🏗️ This page is currently under construction. Check back later!</p>
+			  <div class="games">
+				<div class="section-header">
+					<h2>Games I play</h2>
+				</div>
+
+				<div class="cluster">
+					<Gamecard 
+					href="https://landfall.se/hastebrokenworlds"
+					img="https://cdn2.steamgriddb.com/icon/2d36217f985d0e382e2513ae9eb67e4c/32/512x512.png"
+					title="Haste" />
+
+					<Gamecard 
+					href="https://osu.ppy.sh/users/21453425"
+					img="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Osu%21_Logo_2016.svg/1200px-Osu%21_Logo_2016.svg.png"
+					title="osu!"/>
+
+					<Gamecard 
+					href="https://www.minecraft.net/"
+					img="https://www.minecraft.net/content/dam/minecraftnet/franchise/logos/minecraft-creeper-face.jpg"
+					title="Minecraft"/>
+
+					<Gamecard 
+					href="https://www.nolimitscoaster.com/"
+					img="https://i.imgur.com/NV0WFQY.png"
+					title="NoLimits 2"/>
+
+					<Gamecard 
+					href="https://store.steampowered.com/app/977950/A_Dance_of_Fire_and_Ice/"
+					img="https://play-lh.googleusercontent.com/L8rCly8hMWuP95PbihDZlSV2u0oGrs0hl2lEXboO7XHX2XalJZ1rjgOsFYXnEDWbpQ=w256"
+					title="A Dance of Fire and Ice"/>
+
+					<Gamecard 
+					href="https://ninjakiwi.com/Games/Mobile/Bloons-TD-6.html"
+					img="https://play-lh.googleusercontent.com/4te8y2It_nyY4yX5jcSEFaTDro98302l9EnSbkJyCobGUo8GWxteV_8kJ8nlXyStxw"
+					title="Bloons TD 6"/>
+					
+				</div>
+
 			  </div>
+
+			  <div class="social-media">
+
+			<div class="section-header">
+				<h2>Social Media</h2>
+			</div>
+			<div class="cluster">
+				<Gamecard 
+					href="https://landfall.se/hastebrokenworlds"
+					img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png"
+					title="Steam" />
+					<Gamecard 
+					href="https://landfall.se/hastebrokenworlds"
+					img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/768px-YouTube_icon_%282013-2017%29.png"
+					title="YouTube" />
+					<Gamecard 
+					href="https://twitch.com/uncutified"
+					img="https://img.icons8.com/color/512/twitch--v2.png"
+					title="Twitch" />
+			</div>
+
 			  <hr class="section-seperation">
 		</main>
 		<Footer />

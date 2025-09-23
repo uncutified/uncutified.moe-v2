@@ -11,7 +11,7 @@
 :root{
 	--borders: #dddddd;
 	--bg-color: #ffffff;
-	--text: #000000;
+	--text: #5a5a5a;
 	--text-accent: #5f5f5f;
 	--accent: #f55faa;
 	--boxfill: #ffffff;
@@ -162,6 +162,23 @@ nav a:hover {
 	background-color: color-mix(in srgb, var(--borders), black 30%);
   }
 
+  .gamecard {
+	flex: 1 1 calc(33% - 1rem);
+	box-sizing: border-box;
+	background-color: var(--boxfill);
+	border: 1px solid var(--borders);
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+	padding: 0 10px;
+	text-decoration: none;
+	transition: ease 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .gamecard:hover {
+	transform: translateY(-2px);
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.35);
+	background-color: color-mix(in srgb, var(--borders), black 30%);
+  }
+
   .projecttitle {
 	display: flex;
 	justify-content: space-between;
@@ -252,5 +269,6 @@ nav a:hover {
 
   @media (max-width: 840px) {
 	.projectcard { flex-basis: 100%; }
+	.gamecard { flex-basis: 100%; }
 	body { max-width: 90%;}
   }
