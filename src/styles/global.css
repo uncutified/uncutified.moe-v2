@@ -1,11 +1,11 @@
 @font-face {
-	font-family: DBNeoHead; /* set name */
-	src: url(../../fonts/DBNeoScreenHead-Black-woff2-data.woff2); /* url of the font */
+	font-family: DBNeoHead;
+	src: url(../../fonts/DBNeoScreenHead-Black-woff2-data.woff2);
   }
 
   @font-face {
-	font-family: DBNeoSans; /* set name */
-	src: url(../../fonts/DBNeoScreenSans-Regular-woff2-data.woff2); /* url of the font */
+	font-family: DBNeoSans;
+	src: url(../../fonts/DBNeoScreenSans-Regular-woff2-data.woff2);
   }
 
 :root{
@@ -16,7 +16,7 @@
 	--accent: #f55faa;
 	--boxfill: #ffffff;
 	--summary: #ffffff;
-	--selection: #735162;
+	--selection: #f8c5df;
 }
 
 :root.dark {
@@ -27,7 +27,7 @@
 	--accent: #ffb6db;
 	--boxfill: #1f1f1f;
 	--summary: #1c1c1c;
-	--selection: #735162;
+	--selection: #804864ab;
 }
 
 ::selection {
@@ -236,6 +236,12 @@ nav a:hover {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #2c3d58;
+  }
+
+  .contactcard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
   }
 
   footer {

@@ -1,0 +1,30 @@
+---
+interface Props {
+  href: string;
+  i: string;
+  title: string;
+  description: string;
+  rescolor: string;
+  probability: string;
+
+}
+
+const { href, i, title, description, rescolor, probability } = Astro.props;
+---
+<a href={href} class="projectcard">
+        <div class="projecttitle">
+            <div class="titlecontent">
+                <i class={i}></i>
+                <p class="cardtitle">
+                    {title}
+                </p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+    <div class="contactcard">
+          <p class="carddescription">
+        {description}
+    </p>
+    <p class="carddescription" style={{ color: rescolor }}>{probability}</p>
+    </div>
+</a>

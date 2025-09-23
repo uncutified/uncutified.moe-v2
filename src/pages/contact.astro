@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Summary from '../components/Summary.astro';
-import Projectcard from '../components/Projectcard.astro';
+import Contactcard from '../components/Contactcard.astro';
 import Friendpic from '../components/Friendpic.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
@@ -27,8 +27,41 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			  </div>
 			  <hr class="section-seperation">
 
-			  <div class="about-me">
-				<p class="wip">🏗️ This page is currently under construction. Check back later!</p>
+			  <div class="contact-buttons">
+				<div class="cluster">
+					<Contactcard 
+					href="https://discord.com/users/905133915700863026"
+					i="fa-brands fa-discord"
+					title="Discord"
+					description="I'm chronically online here!"
+					rescolor='#77ff77'
+					probability="99%" />
+
+					<Contactcard 
+					href="https://wa.me/+4915252119306"
+					i="fa-brands fa-whatsapp"
+					title="WhatsApp"
+					description="I check messages frequently."
+					rescolor='#ddff77'
+					probability="80%" />
+
+					<Contactcard 
+					href="https://www.instagram.com/that_random_tf/"
+					i="fa-brands fa-instagram"
+					title="Instagram"
+					description="I check messages about 2-3 times a week."
+					rescolor='#ffaa77'
+					probability="60%" />
+
+					<Contactcard 
+					href="mailto:hi@uncutified.moe"
+					i="fa-solid fa-envelope"
+					title="Email"
+					description="I may respond within 14 days."
+					rescolor='#ff7777'
+					probability="20%" />
+
+				</div>
 			  </div>
 
 			  <hr class="section-seperation">
