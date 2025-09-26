@@ -119,10 +119,30 @@ nav a:hover {
 
   .section-header {
 	font-family: DBNeoSans;
-	font-size: 0.9rem;
+	font-size: 0.95rem;
 	margin: 0;
 	padding: 0;
 	color: var(--text);
+  }
+
+  .section-subheader {
+	font-family: DBNeoSans;
+	font-size: 0.9rem;
+	margin-top: -1rem;
+	padding: 0;
+	color: var(--text-accent);
+  }
+
+  .section-subheader a {
+	color: var(--accent);
+	text-decoration: none;
+	transition: ease 0.2s;
+  }
+
+  .section-subheader a:hover {
+	color: var(--selection);
+	transition: ease 0.2s;
+
   }
 
   .summary-box {
