@@ -172,5 +172,26 @@ img='https://dp.nea.moe/avatar/603229858612510720.png'/>
 		}
 		
 		type();
+
+		 // amy...
+  (function () {
+    const amy = document.querySelector(
+      '.friendpic[href="https://amy.rip"], .friendpic[title="amyulated (jar)"]'
+    );
+
+    if (!amy) {
+      console.warn("Amy not found!");
+      return;
+    }
+
+    amy.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+
+      amy.classList.remove("eighteightpic--spin");
+      void amy.offsetWidth;
+      amy.classList.add("eighteightpic--spin");
+    });
+  })();
+		
 		</script>
 </html>
