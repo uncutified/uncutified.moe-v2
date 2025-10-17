@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Summary from '../components/Summary.astro';
 import Projectcard from '../components/Projectcard.astro';
 import Friendpic from '../components/Friendpic.astro';
+import Eighteight from '../components/Eighteight.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -38,6 +39,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<div class="summary">
 				<div class="section-header">
 					<h2>Summary</h2>
+					<p class="section-subheader">Find out what I love and what I do</p>
 				</div>
 				<Summary />
 			</div>
@@ -45,11 +47,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<div class="projects">
 				<div class="section-header">
 					<h2>Projects</h2>
+					<p class="section-subheader">Some of my projects, more can be found on my <a href="https://github.com/uncutified">GitHub</a></p>
 				</div>
 				<div class="cluster">
 					<Projectcard 
 					href="https://minehost.xyz/"
-					img="https://minehost.xyz/img/minehost-logo.png"
+					img="https://minehost.xyz/logo.png"
 					title="Minehost.xyz"
 					description="Affordable server hosting"/>
 
@@ -65,7 +68,31 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<div class="friends">
 				<div class="section-header">
 					<h2>Friends</h2>
+					<p class="section-subheader">All the cuties here :3</p>
 				</div>
+
+				<!-- 88x31'S -->
+
+				<div class="eighteightbar">
+					<Eighteight
+					href="https://wearr.dev/"
+					title='Wearr'
+					img='https://wearr.dev/88x31.gif'/>
+
+					<Eighteight
+					href="https://vendicated.dev"
+					title='a real veev'
+					img='https://vendicated.dev/assets/88x31/me.gif'/>
+
+					<Eighteight
+					href="https://mugman.tech"
+					title='mugman'
+					img='https://mugman.tech/88x31/me.png'/>
+		
+				</div>
+
+				<!-- Avatars -->
+
 				<div class="friendbar">
 					<Friendpic
 href="https://caitlyn.moe/"
@@ -74,11 +101,23 @@ img='https://github.com/fielstamper.png'/>
 <Friendpic
 					href="https://codeberg.org/paige"
 					title='Paige'
-img='https://codeberg.org/avatars/a632c29185051c28a6cdefa5a339ff9b6a014a64eb0fbd6c8406af602af1ac8c?size=512'/>
+img='https://codeberg.org/avatars/af3012466937eef066e4dd2d912ec679f36f2e0252e439eb81e8983d6c6de61b?size=512'/>
 <Friendpic
-					href="https://canoytpmv.lol/"
-					title='Cano'
-img='https://canoytpmv.lol/YouTube%20Content%20Bilder/Berliner%20S-Bahn%20Logo.jpg'/>
+					href="https://llsc12.me/"
+					title='llsc'
+img='https://avatars.githubusercontent.com/u/42747613?v=4'/>
+<Friendpic
+					href="https://github.com/rniii"
+					title='rini'
+img='https://avatars.githubusercontent.com/u/142252300?v=4'/>
+<Friendpic
+					href="https://vendicated.dev"
+					title='a real veev'
+img='https://avatars.githubusercontent.com/u/45497981?v=4'/>
+<Friendpic
+					href="https://amy.rip"
+					title='amyulated (jar)'
+img='https://dp.nea.moe/avatar/603229858612510720.png'/>
 
 					
 				</div>
@@ -125,5 +164,3 @@ img='https://canoytpmv.lol/YouTube%20Content%20Bilder/Berliner%20S-Bahn%20Logo.j
 		type();
 		</script>
 </html>
-
-

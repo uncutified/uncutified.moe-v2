@@ -119,10 +119,30 @@ nav a:hover {
 
   .section-header {
 	font-family: DBNeoSans;
-	font-size: 0.9rem;
+	font-size: 0.95rem;
 	margin: 0;
 	padding: 0;
 	color: var(--text);
+  }
+
+  .section-subheader {
+	font-family: DBNeoSans;
+	font-size: 0.9rem;
+	margin-top: -1rem;
+	padding: 0;
+	color: var(--text-accent);
+  }
+
+  .section-subheader a {
+	color: var(--accent);
+	text-decoration: none;
+	transition: ease 0.2s;
+  }
+
+  .section-subheader a:hover {
+	color: var(--selection);
+	transition: ease 0.2s;
+
   }
 
   .summary-box {
@@ -215,6 +235,17 @@ nav a:hover {
 	border-radius: 10px;
 	border: 1px solid var(--borders);
   }
+  .eighteightbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center; /* verhindert strecken */
+	background-color: var(--boxfill);
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--borders);
+	margin-bottom: 1rem;
+  }
   
   .friendpic {
 	flex: 0 0 52px;
@@ -239,6 +270,31 @@ nav a:hover {
 	transform: translateY(-1px);
 	transition: box-shadow 120ms ease, transform 120ms ease, outline-color 120ms ease;
   }
+
+.eighteightpic {
+  flex: 0 0 auto;
+  width: 88px;
+  height: 31px;
+  border-radius: 4px; /* leicht abgerundet, optional */
+  overflow: hidden;
+  position: relative;
+  outline: 1px solid color-mix(in srgb, var(--borders), white 6%);
+  transition: box-shadow 120ms ease, transform 120ms ease, outline-color 120ms ease;
+}
+
+.eighteightpic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* oder 'contain', wenn du keine Beschnitte willst */
+}
+
+.eighteightpic:hover {
+  outline-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent), transparent 70%);
+  transform: translateY(-1px);
+}
+
 
   .about-me {
 	line-height: 1.5;
