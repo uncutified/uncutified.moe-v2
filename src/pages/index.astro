@@ -6,219 +6,197 @@ import Summary from '../components/Summary.astro';
 import Projectcard from '../components/Projectcard.astro';
 import Friendpic from '../components/Friendpic.astro';
 import Eighteight from '../components/Eighteight.astro';
-import {SITE_DESCRIPTION, SITE_TITLE} from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
-<head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
-<body>
-<Header/>
-<main>
-    <div class="splash">
-        <div class="splash-content">
-            <div class="splash-header">
-                <h2>hi, i'm <span style="color: var(--accent);" id="typing"></span></h2>
-            </div>
-            <div class="splash-subheader">
-                <p>18 years old silly girly from germany</p>
-            </div>
-        </div>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="splash">
+				<div class="splash-content">
+				  <div class="splash-header">
+					<h2>hi, i'm <span style="color: var(--accent);" id="typing"></span></h2>
+				  </div>
+				  <div class="splash-subheader">
+					<p>18 years old silly girly from germany</p>
+				  </div>
+				</div>
+				
+				<div class="splash-image">
+				  <a href="https://gadse.uwurzelkater.de/"><img src="https://github.com/uncutified.png" alt="Lexy" /></a>
+				</div>
+			  </div>
 
-        <div class="splash-image">
-            <a href="https://gadse.uwurzelkater.de/"><img src="https://github.com/uncutified.png" alt="Lexy"/></a>
-        </div>
-    </div>
+			<hr class="section-seperation">
 
-    <hr class="section-seperation">
+			<div class="summary">
+				<div class="section-header">
+					<h2>Summary</h2>
+					<p class="section-subheader">Find out what I love and what I do</p>
+				</div>
+				<Summary />
+			</div>
 
-    <div class="summary">
-        <div class="section-header">
-            <h2>Summary</h2>
-            <p class="section-subheader">Find out what I love and what I do</p>
-        </div>
-        <Summary/>
-    </div>
+			<div class="projects">
+				<div class="section-header">
+					<h2>Projects</h2>
+					<p class="section-subheader">Some of my projects, more can be found on my <a href="https://github.com/uncutified">GitHub</a></p>
+				</div>
+				<div class="cluster">
+					<Projectcard 
+					href="https://minehost.xyz/"
+					img="https://minehost.xyz/logo.png"
+					title="Minehost.xyz"
+					description="Affordable server hosting"/>
 
-    <div class="projects">
-        <div class="section-header">
-            <h2>Projects</h2>
-            <p class="section-subheader">Some of my projects, more can be found on my <a
-                    href="https://github.com/uncutified">GitHub</a></p>
-        </div>
-        <div class="cluster">
-            <Projectcard
-                    href="https://minehost.xyz/"
-                    img="https://minehost.xyz/logo.png"
-                    title="Minehost.xyz"
-                    description="Affordable server hosting"/>
+					<Projectcard 
+					href="#"
+					img="https://cdn.discordapp.com/icons/1183800558629441587/f6078f12b424e96742a77acdaedbb174.webp?size=1024"
+					title="Valendria.net"
+					description="Minecraft server network (paused)"/>
+					
+				</div>
+			</div>
 
-            <Projectcard
-                    href="#"
-                    img="https://cdn.discordapp.com/icons/1183800558629441587/f6078f12b424e96742a77acdaedbb174.webp?size=1024"
-                    title="Valendria.net"
-                    description="Minecraft server network (paused)"/>
+			<div class="friends">
+				<div class="section-header">
+					<h2>Friends</h2>
+					<p class="section-subheader">All the cuties here :3</p>
+				</div>
 
-        </div>
-    </div>
+				<!-- 88x31'S -->
 
-    <div class="friends">
-        <div class="section-header">
-            <h2>Friends</h2>
-            <p class="section-subheader">All the cuties here :3</p>
-        </div>
+				<div class="eighteightbar">
+					<Eighteight
+					href="https://wearr.dev/"
+					title='Wearr'
+					img='https://wearr.dev/88x31.gif'/>
 
-        <!-- 88x31'S -->
+					<Eighteight
+					href="https://vendicated.dev"
+					title='a real veev'
+					img='https://vendicated.dev/assets/88x31/me.gif'/>
 
-        <div class="eighteightbar">
-            <Eighteight
-                    href="https://wearr.dev/"
-                    title='Wearr'
-                    img='https://wearr.dev/88x31.gif'/>
+					<Eighteight
+					href="https://mugman.tech"
+					title='mugman'
+					img='https://mugman.tech/88x31/me.png'/>
 
-            <Eighteight
-                    href="https://vendicated.dev"
-                    title='a real veev'
-                    img='https://vendicated.dev/assets/88x31/me.gif'/>
+					<Eighteight
+					href="https://codeberg.org/paige"
+					title='paipai'
+					img='/paige88x31.gif'/>
 
-            <Eighteight
-                    href="https://mugman.tech"
-                    title='mugman'
-                    img='https://mugman.tech/88x31/me.png'/>
+					<Eighteight
+					href="https://worf.win/"
+					title='worf'
+					img='https://worf.win/images/worfwin.gif'/>
 
-            <Eighteight
-                    href="https://codeberg.org/paige"
-                    title='paipai'
-                    img='/paige88x31.gif'/>
+                    <Eighteight
+					href="https://elissa.moe/"
+					title='elissa bwa'
+					img='https://elissa.moe/_astro/88x31.CXG_6iqd_2iF7XG.webp'/>
+		
+				</div>
 
-            <Eighteight
-                    href="https://worf.win/"
-                    title='worf'
-                    img='https://worf.win/images/worfwin.gif'/>
+				<!-- Avatars -->
 
-        </div>
+				<div class="friendbar">
+					<Friendpic
+href="https://caitlyn.moe/"
+					title='Caitlyn'
+img='https://github.com/fielstamper.png'/>
+<Friendpic
+					href="https://codeberg.org/paige"
+					title='Paige'
+img='https://codeberg.org/avatars/af3012466937eef066e4dd2d912ec679f36f2e0252e439eb81e8983d6c6de61b?size=512'/>
+<Friendpic
+					href="https://llsc12.me/"
+					title='llsc'
+img='https://avatars.githubusercontent.com/u/42747613?v=4'/>
+<Friendpic
+					href="https://github.com/rniii"
+					title='rini'
+img='https://avatars.githubusercontent.com/u/142252300?v=4'/>
+<Friendpic
+					href="https://vendicated.dev"
+					title='a real veev'
+img='https://avatars.githubusercontent.com/u/45497981?v=4'/>
+<Friendpic
+					href="https://amy.rip"
+					title='amyulated (jar)'
+img='https://dp.nea.moe/avatar/603229858612510720.png'/>
 
-        <!-- Avatars -->
-
-        <div class="friendbar">
-            <Friendpic
-                    href="https://caitlyn.moe/"
-                    title='Caitlyn'
-                    img='https://github.com/fielstamper.png'/>
-            <Friendpic
-                    href="https://codeberg.org/paige"
-                    title='Paige'
-                    img='https://codeberg.org/avatars/af3012466937eef066e4dd2d912ec679f36f2e0252e439eb81e8983d6c6de61b?size=512'/>
-            <Friendpic
-                    href="https://llsc12.me/"
-                    title='llsc'
-                    img='https://avatars.githubusercontent.com/u/42747613?v=4'/>
-            <Friendpic
-                    href="https://github.com/rniii"
-                    title='rini'
-                    img='https://avatars.githubusercontent.com/u/142252300?v=4'/>
-            <Friendpic
-                    href="https://vendicated.dev"
-                    title='a real veev'
-                    img='https://avatars.githubusercontent.com/u/45497981?v=4'/>
-            <Friendpic
-                    href="https://amy.rip"
-                    title='amyulated (jar)'
-                    img='https://dp.nea.moe/avatar/603229858612510720.png'/>
-
-
-        </div>
-    </div>
-    <hr class="section-seperation">
-</main>
-<Footer/>
-</body>
+					
+				</div>
+			</div>
+			<hr class="section-seperation">
+		</main>
+		<Footer />
+	</body>
 
 
-<script>
-    let words = ["recutified", "lexy", "silly"];
-    let i = 0;
-    let j = 0;
-    let currentWord = "";
-    let isDeleting = false;
-    let typeTimeout;
-    const speed = 100;
-    const eraseSpeed = 80;
-    const delay = 3000;
+	
+	<script>
+		const words = ["recutified", "lexy", "silly"];
+		let i = 0;
+		let j = 0;
+		let currentWord = "";
+		let isDeleting = false;
+		const speed = 100;
+		const eraseSpeed = 80;
+		const delay = 3000;
+		
+		function type() {
+		  currentWord = words[i];
+		  
+		  if (!isDeleting) {
+			document.getElementById("typing").textContent = currentWord.substring(0, j + 1);
+			j++;
+			if (j === currentWord.length) {
+			  isDeleting = true;
+			  setTimeout(type, delay);
+			  return;
+			}
+		  } else {
+			document.getElementById("typing").textContent = currentWord.substring(0, j - 1);
+			j--;
+			if (j === 0) {
+			  isDeleting = false;
+			  i = (i + 1) % words.length;
+			}
+		  }
+		  setTimeout(type, isDeleting ? eraseSpeed : speed);
+		}
+		
+		type();
 
-    function type() {
-        // Clear any existing timeout to avoid race conditions if called externally
-        clearTimeout(typeTimeout);
+		 // amy...
+  (function () {
+    const amy = document.querySelector(
+      '.friendpic[href="https://amy.rip"], .friendpic[title="amyulated (jar)"]'
+    );
 
-        currentWord = words[i];
-
-        if (!isDeleting) {
-            document.getElementById("typing").textContent = currentWord.substring(0, j + 1);
-            j++;
-
-            if (j === currentWord.length) {
-                isDeleting = true;
-                setTimeout(type, delay);
-                return;
-            }
-        } else {
-            document.getElementById("typing").textContent = currentWord.substring(0, j - 1);
-            j--;
-            if (j === 0) {
-                isDeleting = false;
-                i = (i + 1) % words.length;
-            }
-        }
-        typeTimeout = setTimeout(type, isDeleting ? eraseSpeed : speed);
+    if (!amy) {
+      console.warn("Amy not found!");
+      return;
     }
 
-    type();
+    amy.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
 
-    // amy...
-    (function () {
-        const amy = document.querySelector(
-            '.friendpic[href="https://amy.rip"], .friendpic[title="amyulated (jar)"]'
-        );
-
-        if (!amy) {
-            console.warn("Amy not found!");
-            return;
-        }
-
-        amy.addEventListener("click", (e) => {
-            e.preventDefault();
-
-            words = ["amy"];
-            i = 0;
-            j = 0;
-            isDeleting = false;
-
-            type(); // Restart the typing animation with the new words
-            const amy2 = document.querySelector('.splash-subheader')
-            if (!amy2) {
-                console.warn("Amy2 not found!");
-                return;
-            }
-            amy2.innerText = "muhahahaha i stole your website"
-            const amy3 = document.querySelector('.summary-box')
-            if (!amy3) {
-                console.warn("Amy3 not found!");
-                return;
-            }
-            amy3.innerText = "meowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeow"
-            const amy4 = document.querySelector('.splash-image')
-            if (!amy4) {
-                console.warn("Amy4 not found!");
-                return;
-            }
-            amy4.innerHTML = "<a href='https://amy.rip'>click me<a/>"
-        });
-
-    })();
-
-</script>
+      amy.classList.remove("eighteightpic--spin");
+      void amy.offsetWidth;
+      amy.classList.add("eighteightpic--spin");
+    });
+  })();
+		
+		</script>
 </html>
