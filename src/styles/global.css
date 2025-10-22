@@ -335,6 +335,16 @@ nav a:hover {
 	padding: 10px;
   }
 
+  .codeblock {
+	color: var(--text);
+	background-color: var(--boxfill);
+	border-color: var(--borders);
+	border-style: solid;
+	border-radius: 5px;
+	padding: 8px 10px;
+	border-width: 1px;
+  }
+
   @media (max-width: 840px) {
 	.projectcard { flex-basis: 100%; }
 	.gamecard { flex-basis: 100%; }
