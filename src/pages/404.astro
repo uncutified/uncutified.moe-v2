@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Summary from '../components/Summary.astro';
+import Contactcard from '../components/Contactcard.astro';
+import Friendpic from '../components/Friendpic.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="subsplash">
+				<div class="splash-content">
+				  <div class="splash-header">
+					<h2><span style="color: var(--accent);">404</span> - You're kinda lost.</h2>
+				  </div>
+				</div>
+			  </div>
+			  <hr class="section-seperation">
+
+			  <div class="fzf">
+			  <p>Enter the train back to the existence...</p>
+			  <a href="/"><img src="/siemensdesirohc.png" alt=""></a>
+			  </div>
+
+			  <hr class="section-seperation">
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -346,6 +346,20 @@ nav a:hover {
 	border-width: 1px;
   }
 
+  .fzf {
+	color: var(--text);
+  }
+
+.fzf img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  image-rendering: pixelated;
+}
+
   @media (max-width: 840px) {
 	.projectcard { flex-basis: 100%; }
 	.gamecard { flex-basis: 100%; }
