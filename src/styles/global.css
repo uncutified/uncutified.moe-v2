@@ -226,8 +226,9 @@ nav a:hover {
   }
 
   .friendbar {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
 	gap: 0.5rem;
 	align-items: center;
 	background-color: var(--boxfill);
@@ -236,8 +237,9 @@ nav a:hover {
 	border: 1px solid var(--borders);
   }
   .eighteightbar {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
 	gap: 0.5rem;
 	align-items: center;
 	background-color: var(--boxfill);
