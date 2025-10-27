@@ -361,6 +361,19 @@ nav a:hover {
   image-rendering: pixelated;
 }
 
+.eighteightshow {
+	padding-bottom: 25px;
+}
+.eighteightshow p {
+	color: var(--text);
+}
+
+.eighteightshow img {
+	width: 88px;
+	height: 31px;
+	padding-bottom: 15px;
+}
+
   @media (max-width: 840px) {
 	.projectcard { flex-basis: 100%; }
 	.gamecard { flex-basis: 100%; }
