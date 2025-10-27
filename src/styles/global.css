@@ -360,10 +360,6 @@ nav a:hover {
   display: block;
   image-rendering: pixelated;
 }
-
-.eighteightshow {
-	padding-bottom: 25px;
-}
 .eighteightshow p {
 	color: var(--text);
 }
@@ -371,7 +367,7 @@ nav a:hover {
 .eighteightshow img {
 	width: 88px;
 	height: 31px;
-	padding-bottom: 15px;
+	padding-bottom: 1px;
 }
 
   @media (max-width: 840px) {
