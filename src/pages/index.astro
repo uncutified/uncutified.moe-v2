@@ -6,6 +6,7 @@ import Summary from '../components/Summary.astro';
 import Projectcard from '../components/Projectcard.astro';
 import Friendpic from '../components/Friendpic.astro';
 import Eighteight from '../components/Eighteight.astro';
+import Totd from '../components/Totd.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -150,7 +151,7 @@ img='https://avatars.githubusercontent.com/u/45497981?v=4'/>
 					title='amyulated (jar)'
 img='https://dp.nea.moe/avatar/603229858612510720.png'/>
 <Friendpic
-					href="https://khcrysalis.dev"
+					href="https://claration.dev/"
 					title='sammy'
 img='https://dp.nea.moe/avatar/400482410279469056.png'/>
 
@@ -158,6 +159,17 @@ img='https://dp.nea.moe/avatar/400482410279469056.png'/>
 					
 				</div>
 			</div>
+
+			<hr class="section-seperation">
+
+			<section class="totd" aria-labelledby="totd-heading">
+				<div class="section-header">
+					<h2 id="totd-heading">TOTD</h2>
+					<p class="section-subheader">Train of the day</p>
+				</div>
+
+				<Totd />
+			</section>
 			<hr class="section-seperation">
 		</main>
 		<Footer />
@@ -166,6 +178,84 @@ img='https://dp.nea.moe/avatar/400482410279469056.png'/>
 
 	
 	<script>
+		const totdImages = [
+			{ src: "/1.JPEG", caption: "Bogie of a BR462 EMU (Siemens Desiro HC)" },
+			{ src: "/2.JPEG", caption: "Cab of a BR462 EMU (Siemens Desiro HC)" },
+			{ src: "/3.JPEG", caption: "Vennie enjoying the view (Siemens Desiro HC)" },
+			{ src: "/4.JPEG", caption: "Does she want to... (Siemens Desiro HC)" },
+			{ src: "/5.JPEG", caption: "Moin KHEZ! (Siemens Desiro HC)" },
+			{ src: "/6.jpg", caption: "Hamster on Tour 🐹 (Bombadier Talent 2)" },
+			{ src: "/7.jpg", caption: "Double power (Bombadier Talent 2)" },
+			{ src: "/8.jpg", caption: "Short break absolutely needed (Bombadier Talent 2)" },
+			{ src: "/9.jpg", caption: "☀️🌉💧⛪ (Bombardier Talent 2)" },
+			{ src: "/10.jpg", caption: "That gotta be a nice office for today (Bombadier Talent 2)" },
+			{ src: "/11.JPEG", caption: "I'm ready to pair! (Siemens Desiro HC)" },
+			{ src: "/12.JPEG", caption: "Holy night office (Siemens Desiro HC)" },
+			{ src: "/13.JPEG", caption: "Stranded 60 minutes in Bergkamen (Siemens Desiro HC)" }
+		];
+
+		const totdTimeZone = "Europe/Berlin";
+		const totdImage = document.getElementById("totd-image");
+		const totdCaption = document.getElementById("totd-caption");
+		const totdDateFormatter = new Intl.DateTimeFormat("en-CA", {
+			timeZone: totdTimeZone,
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+		});
+
+		function getTotdDateKey(date = new Date()) {
+			const parts = totdDateFormatter.formatToParts(date);
+			const part = (type) => parts.find((item) => item.type === type)?.value;
+			return `${part("year")}-${part("month")}-${part("day")}`;
+		}
+
+		function getTotdIndex(dateKey) {
+			let hash = 2166136261;
+
+			for (const character of dateKey) {
+				hash ^= character.charCodeAt(0);
+				hash = Math.imul(hash, 16777619);
+			}
+
+			return (hash >>> 0) % totdImages.length;
+		}
+
+		function updateTotd() {
+			if (!totdImage || !totdCaption || totdImages.length === 0) return;
+
+			const train = totdImages[getTotdIndex(getTotdDateKey())];
+			totdImage.setAttribute("src", train.src);
+			totdImage.setAttribute("alt", train.caption || "Train of the day");
+			totdCaption.textContent = train.caption || "Train of the day";
+		}
+
+		function getNextTotdChange() {
+			const currentDateKey = getTotdDateKey();
+			let start = Date.now();
+			let end = start + 30 * 60 * 60 * 1000;
+
+			// Find the first millisecond belonging to the next day in Berlin.
+			while (end - start > 1000) {
+				const middle = Math.floor((start + end) / 2);
+				if (getTotdDateKey(new Date(middle)) === currentDateKey) start = middle;
+				else end = middle;
+			}
+
+			return end;
+		}
+
+		function scheduleTotdUpdate() {
+			const delayUntilMidnight = Math.max(1000, getNextTotdChange() - Date.now() + 100);
+			window.setTimeout(() => {
+				updateTotd();
+				scheduleTotdUpdate();
+			}, delayUntilMidnight);
+		}
+
+		updateTotd();
+		scheduleTotdUpdate();
+
 		const words = ["uncutified", "silly", "a train driver", "buidling great stuff"];
 		let i = 0;
 		let j = 0;
